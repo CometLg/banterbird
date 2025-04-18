@@ -13,10 +13,13 @@ function submitPost() {
     alert("Tweet submitted (not really yet)");
 }
 
-window.onload = () => {
-    const hardcodedPost = {
-        username: "admin",
-        message: "Welcome to Banterbird! This post is hardcoded.",
-    };
+window.onload = async () => {   // async -> run parrlel to other code
+    try {
+        const response = await fetch("/api/posts");
+        const posts = await response.json();
+        posts.forEach((post) => renderPost(post));  // loop through posts
+    } catch (error) {
+        console.error("FIX THISSSS:", error);
+    }
     renderPost(hardcodedPost);
 };

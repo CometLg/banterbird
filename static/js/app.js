@@ -1,11 +1,10 @@
 const username = "admin";
 
 function renderPost(post, isNew = false) {
-  const template = document
-    .getElementById("post-template")
-    .content.cloneNode(true);
+  const template = document.getElementById("post-template").content.cloneNode(true);
   template.querySelector(".username").innerText = post.username;
   template.querySelector(".message").innerText = post.message;
+
   if (isNew) {
     document.getElementById("feed").prepend(template);
   } else {
@@ -27,7 +26,7 @@ async function submitPost() {
       }),
     });
     if (response.ok) {
-      renderPost({ username: username, message: message }, true);
+      renderPost({ username: username, message: message }, true); // pass 'isNew = true'
       document.getElementById("postInput").value = ""; // Clear the input field for your tweet storm!
     }
   } catch (error) {

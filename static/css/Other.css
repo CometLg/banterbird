@@ -1,0 +1,19 @@
+/* style.css */
+
+body {
+    font-family: sans-serif;
+    background-color:rgb(191, 255, 255);
+    padding: 20px;
+    font-family: "Tuffy", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+
+}
+
+button {
+    background-color: #c0d9ff;
+    font-family: "Tuffy", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}

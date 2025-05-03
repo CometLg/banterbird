@@ -1,3 +1,10 @@
 [
-    
+    {
+        "username": "Something",
+        "message": "Time to Tweet!"
+    },
+    {
+        "username":"Admin",
+        "message":"Update: \n\nYou shouldn't need to refresh to see new messages"
+    }
 ]
